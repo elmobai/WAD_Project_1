@@ -1,0 +1,88 @@
+.paddingmarginZero
+{
+	padding: 0;
+	margin: 0;
+}
+ 
+/* header area style */
+.headerStyle
+{  
+	background-color: #292929;
+	padding: 20px 20px 30px 20px;
+}
+ 
+/* Navigation area style */
+.navbar
+{
+	margin-bottom: 0px;
+	background-color:#ffffcc;
+	background-size: 1400px;
+	
+}
+ 
+/* Cover Area style */
+.jumbotron
+{
+	background: url('../images/bg.png') no-repeat center center;
+	background-position: 0% 0%;
+	background-size: 1400px;
+	background-repeat: no-repeat;
+	color:#00cbcc;
+}
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 0px;
+  color:#00cbcc;
+  
+  
+}
+ 
+.sidebarStyle
+{
+	background-color: #A7D97E;
+	height: 400px;
+	width:1400px;
+	text-align: center;
+}
+.contentAreaStyle
+{
+	background-color: #b3e5ff;
+	height: 500px;
+	
+	text-align: center;
+}
+.contentAreaStyle1
+{
+	background-color: #66cbff;
+	height: 500px;
+
+	text-align: center;
+}
+.contentAreaStyle2
+{
+	background-color: #66ffff;
+	height: 500px;
+	width:800px;
+	text-align: center;
+}
+.footer1Style
+{
+	background-color: #7d7e7d;
+	color: #dddddd;
+	height: 150px;
+	text-align: center;
+}
+.footer2Style
+{
+	background-color: #5C5C5C;
+	color: #dddddd;
+	height: 150px;
+	text-align: center;
+}
+.footerCopyRightStyle
+{
+	background-color: #373737;
+	color: #dddddd;
+	height: 40px;
+	width:1400px;
+	text-align: center;
+}

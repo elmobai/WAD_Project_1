@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="address.xsl"?>
+<directory>
+   <person id="p01">
+      <name>
+		   <first_name>Darren</first_name>
+		   <last_name>Quinn</last_name>
+		</name>
+		<address>
+		   <address_one>123 Bóthar na Trá</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 5676778</telephone>
+   </person>
+   <person id="p02">
+      <name>
+		   <first_name>Sam</first_name>
+		   <last_name>Conneely</last_name>
+		</name>
+		<address>
+		   <address_one>69 North Barr Street</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 4449320</telephone>
+	</person>
+	<person id="p03">
+	   <name>
+		   <first_name>Aaron</first_name>
+		   <last_name>Beveridge</last_name>
+		</name>
+		<address>
+		   <address_one>34 North Barr Street</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 8602916</telephone>
+	</person>
+	<person id="p04">
+	   <name>
+		   <first_name>Emlyn</first_name>
+		   <last_name>Farrell</last_name>
+		</name>
+		<address>
+		   <address_one>9 North Barr Street</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+	   </address>
+		<telephone>021 8008135</telephone>
+	</person>
+	<person id="p05">
+	   <name>
+		   <first_name>Curtis</first_name>
+		   <last_name>Murphy</last_name>
+		</name>
+		<address>
+		   <address_one>124 Bóthar na Trá</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 9271004</telephone>
+	</person>
+	<person id="p06">
+	   <name>
+		   <first_name>Evan</first_name>
+		   <last_name>Byrne</last_name>
+		</name>
+		<address>
+		   <address_one>78 North Barr Street</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 6154094</telephone>
+	</person>
+	<person id="p07">
+	   <name>
+		   <first_name>Caoimhe</first_name>
+		   <last_name>Malone</last_name>
+		</name>
+		<address>
+		   <address_one>101 Bóthar na Trá</address_one>
+		   <address_two>Cobh</address_two>
+	  	   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 8605241</telephone>
+	</person>
+	<person id="p08">
+	   <name>
+		   <first_name>Jane</first_name>
+		   <last_name>Smith</last_name>
+		</name>
+		<address>
+		   <address_one>58 Bóthar na Trá</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 4396710</telephone>
+	</person>
+	<person id="p09">
+	   <name>
+		   <first_name>Katie</first_name>
+		   <last_name>Brady</last_name>
+		</name>
+		<address>
+		   <address_one>65 Bóthar na Trá</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 8605241</telephone>
+	</person>
+	<person id="p10">
+	   <name>
+		   <first_name>Jade</first_name>
+		   <last_name>Byrne</last_name>
+		</name>
+		<address>
+		   <address_one>80 Bóthar na Trá</address_one>
+		   <address_two>Cobh</address_two>
+		   <address_three>County Cork</address_three>
+		</address>
+		<telephone>021 7689362</telephone>
+	</person>
+</directory>

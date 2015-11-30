@@ -1,0 +1,8 @@
+<xsl:template match="text()">
+        			<div style="border: solid 1px">
+            			<xsl:value-of select="."/> </div>
+    			</xsl:template> 
+    			<xsl:template match="/">
+        			<div style="border: solid 3px red; padding: 10px">
+            			<xsl:apply-templates/>  </div>
+    			</xsl:template>
