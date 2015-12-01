@@ -9,13 +9,30 @@
     <!-- Custom CSS -->
     <link href="test.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+      $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+  </script>
  
 </head>
 <body>
     
+    
     <div class="container-fluid ">
+        
     
 		<div class="row">
 			<!-- header area start -->
@@ -25,13 +42,42 @@
 			<!-- menubar area start -->
 			<nav class="navbar navbar-default">
 		
-			<H1 align="center"> Addressbook </H1>
+			<H1 align="center">  Super Fantastic Addressbook Funtime  </H1>
+				<div class="col-sm-12 col-sm-push- navbar">
+				    
+
+<button class="button"><span>Adding</span>
+<li><a href="#adding">adding</a></li>
+</button>
+
+<button class="button"><span>Selecting </span>
+<li><a href="#Selecting">Selecting</a></li>
+</button>
+
+
+<button class="button"><span>Rss Feed </span>
+<li><a href="#Rss">Rss</a></li>
+</button>
+
+<button class="button"><span> Contacts </span>
+<li><a href="#contact">contact</a></li>
+
+</button>
+
+
+
+
+		    
+		    
+		</div>
 
 			  <div class="container-fluid">
 				<!-- navbar for mobile display -->
 				<div class="navbar-header">
-				 
+			
+  
 				</div>
+		
  
 				
 				
@@ -40,8 +86,8 @@
 			
 		
 			
-			
-			<div class="col-sm-10 col-sm-push-0 contentAreaStyle">
+	
+			<div class="col-sm-12 col-sm-push-0 contentAreaStyle" id="adding">
 			    <div id="content">
 			       <H3 align="center"> Adding a Contact </H3>
 
@@ -76,14 +122,16 @@
     </label>
     <br>
 <label>
-        Prefix<br />
-        <input id="txt_Prefix" type="text" style= 'width:50px;"' />
+       
     </label>
 
     <label>
         Number<br />
-        <input id="txt_Number" type="text"  style= 'width:200px;"'  />
+        <input id="txt_Number" type="text"  style= 'width:250px;"'  />
     </label>
+    <br>
+    <button type="button">Save   </button>
+     <button type="button">Delete</button>
 </div>
 
 </div>
@@ -92,28 +140,26 @@
     
 					
 
-			</div>
-				<div class="col-sm-10 col-sm-push-0 contentAreaStyle1">
+				<div class="col-sm-12 col-sm-push-0 contentAreaStyle1" id="Selecting">
 				<H1> Selecting </H1> 
 				<form>
-  First name:<br>
-  <input type="text" name="firstname" style='width:100px;"'/>
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" style='width:100px;"'>
-  <br>
-  Prefix:<br>
-  <input type="text" name="Prefix" style='width:50px;"' >
-  
-  Number:<br>
-  
-  <input type="text" name="number" style='width:50px;"'>
-</form>
+                  </div>
+		
+			  <div class="col-sm-12 col-sm-push-0 contentAreaStyle3" id="Contact">
+        <br>
+        
+        <H3 align="center"> Table of contacts </H3>
+    </Div>
+			<div class="clearfix">
 			</div>
-	<div class="col-sm-10 col-sm-push-0 contentAreaStyle2">
-	
-	
-		</div>
+						  <div class="col-sm-12 col-sm-push-0 contentAreaStyle4" id="Rss">
+						      <title> Rssfeed</title>
+						       <H3 align="center"> Rss Feed </H3>
+						  </div> 
+					
+       
+       
+  
 			<div class="clearfix">
 			</div>
 		
@@ -121,8 +167,9 @@
 			<div class="clearfix">
 			</div>
 			<div class="footerCopyRightStyle">
-				FOOTER COPY RIGHTS
-				<P> Copyright Emlyn, Evan and Curtis </P>
+			<div class="container">
+			    <footer>&copy; Emlyn, Evan and Curtis <br/><a href="#">Back to top</a></footer>
+			
 		
 			</div>
 		</div>

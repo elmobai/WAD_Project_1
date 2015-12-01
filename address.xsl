@@ -14,16 +14,16 @@
 			<body>
 				<h2>My CD Collection</h2>
     				<table border="1">
-      					<tr bgcolor="#9acd32">
+      					<tr bgcolor="cornflowerblue">
         					<th style="text-align:left">Name</th>
         					<th style="text-align:left">Address</th>
         					<th style="text-align:left">Telephone</th>
       					</tr>
       					<xsl:for-each select="directory/person">
       					<tr>
-        					<td><xsl:value-of select="name"/></td>
-        					<td><xsl:value-of select="address"/></td>
-        					<td><xsl:value-of select="telephone"/></td>
+        					<td bgcolor="aliceblue"><xsl:value-of select="name"/></td>
+        					<td bgcolor="aliceblue"><xsl:value-of select="address"/></td>
+        					<td bgcolor="aliceblue"><xsl:value-of select="telephone"/></td>
       					</tr>
       					</xsl:for-each>
     				</table>
@@ -64,40 +64,40 @@
 	
 	<!--1. First Names-->
 	<xsl:template match="first_name">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	<!--2. Last Names-->
 	<xsl:template match="last_name">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	
 	<!--3. Full Name-->
 	<xsl:template match="name">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	
 	<!--4. Address-->
 	<xsl:template match="address">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	
 	<!--5. address_one-->
 	<xsl:template match="address_one">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	
 	<!--6. address_two-->
 	<xsl:template match="address_two">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 		
 	<!--7. address_three-->
 	<xsl:template match="address_three">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	
 	<!--8. Telephone-->
 	<xsl:template match="telephone">
-		<xsl:value-of select="."/>
+		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 </xsl:stylesheet>
