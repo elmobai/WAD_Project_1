@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script>
+  /*Smooth Scroll Function*/
       $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -46,21 +47,21 @@
 				<div class="col-sm-12 col-sm-push- navbar">
 				    
 
-<button class="button"><span>Adding</span>
-<li><a href="#adding">adding</a></li>
+<button class="button"><span>Adding a</span>
+<li><a href="#adding">Contact</a></li>
 </button>
 
-<button class="button"><span>Selecting </span>
-<li><a href="#Selecting">Selecting</a></li>
+<button class="button"><span>Selecting a  </span>
+<li><a href="#Selecting">contact</a></li>
 </button>
 
 
 <button class="button"><span>Rss Feed </span>
-<li><a href="#Rss">Rss</a></li>
+<li><a href="#Rss">Feed</a></li>
 </button>
 
-<button class="button"><span> Contacts </span>
-<li><a href="#contact">contact</a></li>
+<button class="button"><span> Table of   </span>
+<li><a href="#contact">Contacts</a></li>
 
 </button>
 
@@ -88,6 +89,14 @@
 			
 	
 			<div class="col-sm-12 col-sm-push-0 contentAreaStyle" id="adding">
+			    <h2>AJAX</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+
+
+
 			    <div id="content">
 			       <H3 align="center"> Adding a Contact </H3>
 
@@ -130,8 +139,8 @@
         <input id="txt_Number" type="text"  style= 'width:250px;"'  />
     </label>
     <br>
-    <button type="button">Save   </button>
-     <button type="button">Delete</button>
+    <button align="centre" type="button">Save  </button>
+     <button align="centre" type="button">Delete</button>
 </div>
 
 </div>
@@ -145,10 +154,47 @@
 				<form>
                   </div>
 		
-			  <div class="col-sm-12 col-sm-push-0 contentAreaStyle3" id="Contact">
+			  <div class="col-sm-12 col-sm-push-0 contentAreaStyle3" id="contact">
         <br>
         
-        <H3 align="center"> Table of contacts </H3>
+            <H3 align="center"> Table of contacts </H3>
+    
+        <button type="button" onclick="loadDoc()">Show Contacts</button>
+    <br><br>
+    <table id="demo"></table>
+    
+    <script>
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          myFunction(xhttp);
+        }
+      };
+      xhttp.open("GET", "address.xml", true);
+      xhttp.send();
+    }
+    function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table="<tr><th>first_name</th><th>last_name</th<th>address</th<th>telephone</th></tr>";
+      var x = xmlDoc.getElementsByTagName("Person");
+      for (i = 0; i <x.length; i++) { 
+        table += "<tr><td>" +
+        x[i].getElementsByTagName("FIRST_NAME")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+         x[i].getElementsByTagName("LAST_NAME")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+         x[i].getElementsByTagName("ADDRESS")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+         x[i].getElementsByTagName("TELEPHONE")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = table;
+    }
+    </script>
     </Div>
 			<div class="clearfix">
 			</div>
