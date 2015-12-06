@@ -1,14 +1,29 @@
-$(funcion (){
+var xmlHttp = createXmlHttpRequestObject();
+
+function createXmlHttpRequestObject(){
+    var xmlHttp;
     
-    var $orders = $('#orders');
-    
-    $.ajax({
-        type:'GET',
-        url:'/api/orders',
-        success: function(orders){
-            $.each(orders, function(i, order){
-            $orders.append('<li>Name: '+order.name +',drink:' + order.drink + '</li>');
-            });
+    if(window.ActiveXObject){
+        try{
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }catch(e){
+            xmlHttp = false;
         }
-    });
-});
+    }else{
+        try{
+            xmlHttp = new XMLHttpRequest();
+        }catch(e){
+            xmlHttp = false;
+        }
+    }
+    if(!xmlHttp)
+        alert("error cant create object");
+    else
+        return xmlHttp;
+}
+
+function process(){
+    if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
+         = encodeURIComponent(document.getElementById(First))
+    }
+}

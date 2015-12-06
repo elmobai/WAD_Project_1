@@ -43,19 +43,7 @@
 				<h2>Full Address:</h2>
 				<xsl:apply-templates select="/directory/person/address"/>
 				
-				<!--5. address_one-->
-				<h2>First line of Address:</h2>
-				<xsl:apply-templates select="/directory/person/address/address_one"/>
-				
-				<!--6. address_two-->
-				<h2>Second line of Address:</h2>
-				<xsl:apply-templates select="/directory/person/address/address_two"/>
-				
-				<!--7. address_three-->
-				<h2>Third line of Address:</h2>
-				<xsl:apply-templates select="/directory/person/address/address_three"/>
-				
-				<!--8. Telephone -->
+				<!--5. Telephone -->
 				<h2>Telephone No:</h2>
 				<xsl:apply-templates select="/directory/person/telephone"/>
 			</body>
@@ -81,22 +69,7 @@
 		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>
 	
-	<!--5. address_one-->
-	<xsl:template match="address_one">
-		<p><u><xsl:value-of select="."/></u></p>
-	</xsl:template>
-	
-	<!--6. address_two-->
-	<xsl:template match="address_two">
-		<p><u><xsl:value-of select="."/></u></p>
-	</xsl:template>
-		
-	<!--7. address_three-->
-	<xsl:template match="address_three">
-		<p><u><xsl:value-of select="."/></u></p>
-	</xsl:template>
-	
-	<!--8. Telephone-->
+	<!--5. Telephone-->
 	<xsl:template match="telephone">
 		<p><u><xsl:value-of select="."/></u></p>
 	</xsl:template>

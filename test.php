@@ -27,30 +27,12 @@
     }
   });
 });
-
   </script>
-  
-  <script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
-            if(statusTxt == "success")
-                alert("External content loaded successfully!");
-            if(statusTxt == "error")
-                alert("Error: " + xhr.status + ": " + xhr.statusText);
-        });
-    });
-});
+  <script type='text/javascript'>
+
+alert("Login Before Entering contact");
 
 </script>
-<script>
-$(document).ready(function(){
-    $("button1").click(function(){
-        $("	<div class=contentAreaStyle").show();
-    });
-});
-</script>
-
 <script type="text/javascript" src="main.js"></script>
  
 </head>
@@ -72,26 +54,22 @@ $(document).ready(function(){
 				<div class="col-sm-12 col-sm-push- navbar">
 				    
 
-
-<button class="button1"><span>adding a  </span>
-<li><a href="#adding">contact</a></li>
+<button class="button"><span>Adding a</span>
+<li><a href="#adding">Contact</a></li>
 </button>
 
-<button class="button2"><span>Login  </span>
+<button class="button"><span>Login  </span>
 <li><a href="#login">Field</a></li>
 </button>
 
 
-<button class="button3"><span>Rss Feed </span>
+<button class="button"><span>Rss Feed </span>
 <li><a href="#Rss">Feed</a></li>
 </button>
 
-<button class="button4"><span> Table of   </span>
+<button class="button"><span> Table of   </span>
 <li><a href="#contact">Contacts</a></li>
 
-</button>
-<button class="button5"><span> About   </span>
-<li><a href="#">us</a></li>
 </button>
 
 
@@ -117,7 +95,7 @@ $(document).ready(function(){
 		
 			
 
-			<div class="col-sm-12 col-sm-push-0 contentAreaStyle" id="adding" style="visibility: " > <!--Start of Adding a Contact div-->
+			<div class="col-sm-12 col-sm-push-0 contentAreaStyle" id="adding"><!--Start of Adding a Contact div-->
 			    
 
 			    <div id="content">
@@ -224,7 +202,7 @@ $(document).ready(function(){
                     var i;
                     var xmlDoc = xml.responseXML;
                     var table="<tr><th>First Name</th><th>Last Name</th><th>Telephone</th><th>Address</th></tr>";
-                    var x = xmlDoc.getElementsByTagName("person");
+                    var x = xmlDoc.getElementsByTagName("directory");
                     for (i = 0; i <x.length; i++) { 
                         table += "<tr><td>" +
                         x[i].getElementsByTagName("first_name")[0].childNodes[0].nodeValue +
@@ -243,7 +221,32 @@ $(document).ready(function(){
                 </script>
 
 
-     
+         <script>
+            
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari   
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","/home/ubuntu/workspace/address.xml",false);
+            xmlhttp.send();
+            xmlDoc = xmlhttp.responseXML; 
+            document.write("<table border='1'>");
+            var x = xmlDoc.getElementsByTagName("person");
+            for (var i=0; i<x.length; i++) { 
+                document.write("<tr><td>");
+                document.write(x[i].getElementsByTagName("first_name")[0].childNodes[0].nodeValue);
+                document.write("</td><td>");
+                document.write(x[i].getElementsByTagName("Last_name")[0].childNodes[0].nodeValue);
+                document.write("</td></tr>");
+                 document.write(x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue);
+                document.write("</td></tr>");
+                 document.write(x[i].getElementsByTagName("Address")[0].childNodes[0].nodeValue);
+                document.write("</td></tr>");
+            }
+            document.write("</table>");
+        </script>
 
     
 
@@ -252,11 +255,6 @@ $(document).ready(function(){
 			</div><!--End of Table of Contacts Div-->
 						  <div class="col-sm-12 col-sm-push-0 contentAreaStyle4" id="Rss"><!--Start of RSS Feed Div-->
 						      <title> Rssfeed</title>
-						       <H3 align="center"> Rss Feed </H3>
-						  </div>
-						    <div class="col-sm-12 col-sm-push-0 contentAreaStyle5" id="Rss"><!--Start of RSS Feed Div-->
-						      <br>
-						      <title> <br> about us</title>
 						       <H3 align="center"> Rss Feed </H3>
 						  </div> 
 					
